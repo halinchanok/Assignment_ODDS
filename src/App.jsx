@@ -35,7 +35,7 @@ function App() {
 
     if (playerName.trim() !== "") {
       setPlayers([...players, playerName]);
-      alert(`Player ${playerName} added successfully!`);
+      // alert(`Player ${playerName} added successfully!`);
     }
     event.target.playerName.value = "";
   };
@@ -74,30 +74,63 @@ function App() {
     ));
   };
 
+  // const renderKingsTable = (kings) => {
+  //   return kings.map(({ name, key }) => (
+  //     // <h6 className="title">{name}</h6>
+  //     <div class="flex-container">
+  //       <div className="row">
+  //         <div className="col">
+  //           <table className="content">
+  //             <thead>
+  //             <tr>
+  //               <th scope="col">NO.</th>
+  //               <th scope="col">NAME</th>
+  //             </tr>
+  //           </thead>
+  //           <tbody>
+  //             {king
+  //               .filter((player) => player.king.key === key)
+  //               .map(({ player }, index) => (
+  //                 <tr key={index}>
+  //                   <td>{index + 1}</td>
+  //                   <td>{player}</td>
+  //                 </tr>
+  //               ))}
+  //           </tbody>
+  //         </table>
+  //       </div>
+  //       </div>
+  //     </div>
+  //   ));
+  // };
   const renderKingsTable = (kings) => {
-    return kings.map(({ name, key }) => (
-      <div key={key} class="main">
-        <h6 className="head">{name}</h6>
-        <table className="content">
-          <thead>
-            <tr>
-              <th scope="col">NO.</th>
-              <th scope="col">NAME</th>
-            </tr>
-          </thead>
-          <tbody>
-            {king
-              .filter((player) => player.king.key === key)
-              .map(({ player }, index) => (
-                <tr key={index}>
-                  <td>{index + 1}</td>
-                  <td>{player}</td>
+    return (
+      <div className="flex-container">
+        {kings.map(({ name, key }) => (
+          <div key={key} className="flex-box">
+            <h6 className="title">{name}</h6>
+            <table className="content">
+              <thead>
+                <tr>
+                  <th scope="col">NO.</th>
+                  <th scope="col">NAME</th>
                 </tr>
-              ))}
-          </tbody>
-        </table>
+              </thead>
+              <tbody>
+                {king
+                  .filter((player) => player.king.key === key)
+                  .map(({ player }, index) => (
+                    <tr key={index}>
+                      <td>{index + 1}</td>
+                      <td>{player}</td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          </div>
+        ))}
       </div>
-    ));
+    );
   };
 
   return (
@@ -145,20 +178,27 @@ function App() {
                   </button>
                 </form>
               </div>
-              <button className="btn3">
-                <span className="text-container" >
+              <button className="btn4 btn-home">
+                <span className="text-container">
                   <span className="text" onClick={handleBackhome}>
                     HOME
                   </span>
                 </span>
-              </button> 
+              </button>
             </>
           ) : (
+            // page 3
             <>
+              <section class="wrapper">
+                <div class="top">4KINGS</div>
+                <div class="bottom" aria-hidden="true">
+                  4KINGS
+                </div>
+              </section>
               <div className="background-image3"></div>
               {showplayer && renderKingsTable(Kings)}
-              <button className="btn3">
-              <span className="text-container" >
+              <button className="btn4 btn-back">
+                <span className="text-container">
                   <span className="text" onClick={handleBackpage}>
                     BACK
                   </span>
