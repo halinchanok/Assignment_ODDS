@@ -150,7 +150,7 @@ function App() {
       ) : (
         // หน้าสุ่ม page2
         <>
-          <div class="background-image1"></div>
+          <div className="background-image1"></div>
           {!showplayer ? (
             <>
               <div className="form">
@@ -189,13 +189,13 @@ function App() {
           ) : (
             // page 3
             <>
+              <div className="background-image2"></div>
               <section class="wrapper">
                 <div class="top">4KINGS</div>
                 <div class="bottom" aria-hidden="true">
                   4KINGS
                 </div>
               </section>
-              <div className="background-image3"></div>
               {showplayer && renderKingsTable(Kings)}
               <button className="btn4 btn-back">
                 <span className="text-container">
