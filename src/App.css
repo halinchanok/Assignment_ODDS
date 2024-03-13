@@ -312,6 +312,38 @@ body {
   transform: translateY(0);
 }
 
+@media screen and (max-width: 700px) {
+  .btn1 {
+    min-width: unset;
+    padding: 0 15px;
+  }
+
+  .form {
+    left: 5%;
+    width: 90%;
+    margin-top: 200px;
+  }
+
+  .background-image,
+  .background-image1,
+  .background-image2 {
+    background-size: contain;
+  }
+
+  .flex-container > div {
+    font-size: 16px;
+  }
+
+  .btn4.btn-back {
+    top: -5px;
+    left: 68%;
+  }
+
+  .btn4.btn-home {
+    top: 400px;
+    left: 58%;
+  }
+}
 
 
 
