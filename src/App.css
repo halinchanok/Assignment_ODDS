@@ -258,6 +258,7 @@ body {
 }
 
 .btn4 {
+  position: fixed;
   background-color: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: .25rem;
@@ -327,7 +328,7 @@ body {
   .background-image,
   .background-image1,
   .background-image2 {
-    background-size: contain;
+    background-size: cover;
   }
 
   .flex-container > div {
@@ -335,8 +336,8 @@ body {
   }
 
   .btn4.btn-back {
-    top: -5px;
-    left: 68%;
+    top: -10px;
+    left: 70%;
   }
 
   .btn4.btn-home {
