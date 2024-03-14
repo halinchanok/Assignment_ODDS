@@ -1,11 +1,36 @@
-# React + Vite
+# Assignment_ODDS
+โปรเจกต์นี้เป็นระบบที่จะจำลองการคัดสรรสถาบัน 4 Kings โดยให้ผู้ใช้ป้อนชื่อของแต่ละคนเข้าไป จากนั้นระบบจะทำการสุ่มแบ่งคนให้เข้าบ้านของสถาบัน 4 Kings ต่างๆ โดยมีสถาบันทั้งหมด 4 สถาบัน ได้แก่ ประชาชื่น, อินทร, กนกอาชีวะ, และบูรณพล จากนั้นระบบจะแสดงผลลัพธ์ว่าแต่ละบ้านมีคนอยู่ในบ้านไหนบ้าง และจะแสดงจำนวนคนในแต่ละบ้านที่เฉลี่ยเท่าๆ กัน
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Getting Started
+เพื่อรับสำเนาของโปรเจคและเริ่มต้นทำงานบนเครื่องทดสอบของคุณเพื่อการพัฒนาและทดสอบ ทำตามขั้นตอนดังต่อไปนี้:
 
-Currently, two official plugins are available:
+1. **Clone the Repository**: 
+   ```
+   git clone https://github.com/Kwanpeemai/Assignment_Odd-e.git
+   ```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# Assignment_Odd-e
-# Assignment_Odd-e
-# Kwanpeemai-Assignment_Odd-e
+2. **Navigate to the Project Directory**:
+   ```
+   cd Assignment_Odd-e
+   ```
+ 
+3. **Install Dependencies**:
+   ```
+   yarn
+   ```
+   
+4. **Start the Development Server**:
+   ```
+   yarn dev
+   ```
+5. Open your browser and navigate to (http://localhost:5173/Assignment_Odd-e/) to view the app.
+
+## Deployment
+Add additional notes about how to deploy this on a live system
+
+## Built With
+
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+
