@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import { useState } from "react";
-// import { Link } from "react-router-dom";
 
 const Kings = [
   { name: "กนกอาชีวศึกษา", key: "KING1" },
@@ -30,13 +29,13 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    const playerName = event.target.playerName.value;
-
-    if (playerName.trim() !== "") {
-      setPlayers([...players, playerName]);
-      // alert(`Player ${playerName} added successfully!`);
-    }
+  
+    const playerNamesInput = event.target.playerName.value;
+    const playerNames = playerNamesInput
+      .split(/[\s,]+/) 
+      .filter(name => name.trim() !== '');
+  
+    setPlayers(prevPlayers => [...prevPlayers, ...playerNames]);
     event.target.playerName.value = "";
   };
 
@@ -62,7 +61,6 @@ function App() {
     );
     setShowplayer(true);
     setKing(assignedPlayers);
-    // console.log(assignedPlayers);
     setPlayers([]);
   };
 
@@ -73,36 +71,7 @@ function App() {
       </li>
     ));
   };
-
-  // const renderKingsTable = (kings) => {
-  //   return kings.map(({ name, key }) => (
-  //     // <h6 className="title">{name}</h6>
-  //     <div class="flex-container">
-  //       <div className="row">
-  //         <div className="col">
-  //           <table className="content">
-  //             <thead>
-  //             <tr>
-  //               <th scope="col">NO.</th>
-  //               <th scope="col">NAME</th>
-  //             </tr>
-  //           </thead>
-  //           <tbody>
-  //             {king
-  //               .filter((player) => player.king.key === key)
-  //               .map(({ player }, index) => (
-  //                 <tr key={index}>
-  //                   <td>{index + 1}</td>
-  //                   <td>{player}</td>
-  //                 </tr>
-  //               ))}
-  //           </tbody>
-  //         </table>
-  //       </div>
-  //       </div>
-  //     </div>
-  //   ));
-  // };
+ 
   const renderKingsTable = (kings) => {
     return (
       <div className="flex-container">
