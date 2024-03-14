@@ -16,12 +16,13 @@
  
 3. **Install Dependencies**:
    ```
-   yarn
+   yarn install
    ```
    
 4. **Start the Development Server**:
    ```
    yarn dev
+   yarn run dev
    ```
 5. Open your browser and navigate to (http://localhost:5173/) to view the app.
 
