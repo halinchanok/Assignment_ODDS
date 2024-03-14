@@ -6,12 +6,12 @@
 
 1. **Clone the Repository**: 
    ```
-   git clone https://github.com/Kwanpeemai/Assignment_Odd-e.git
+   git clone https://github.com/Kwanpeemai/Assignment_ODDS.git
    ```
 
 2. **Navigate to the Project Directory**:
    ```
-   cd Assignment_Odd-e
+   cd Assignment_ODDS
    ```
  
 3. **Install Dependencies**:
@@ -23,6 +23,6 @@
    ```
    yarn dev
    ```
-5. Open your browser and navigate to (http://localhost:5173/Assignment_Odd-e/) to view the app.
+5. Open your browser and navigate to (http://localhost:5173/) to view the app.
 
 
