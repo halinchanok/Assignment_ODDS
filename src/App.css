@@ -284,7 +284,12 @@ body {
 
 .btn4.btn-back {
   top: -15px;
-  left: 78%;
+  left: 70%;
+}
+
+.btn4.btn-reset {
+  top: -15px;
+  left: 71%;
 }
 
 .btn4.btn-home {

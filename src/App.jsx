@@ -29,13 +29,13 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-  
+
     const playerNamesInput = event.target.playerName.value;
     const playerNames = playerNamesInput
-      .split(/[\s,]+/) 
-      .filter(name => name.trim() !== '');
-  
-    setPlayers(prevPlayers => [...prevPlayers, ...playerNames]);
+      .split(/[\s,]+/)
+      .filter((name) => name.trim() !== "");
+
+    setPlayers((prevPlayers) => [...prevPlayers, ...playerNames]);
     event.target.playerName.value = "";
   };
 
@@ -61,17 +61,8 @@ function App() {
     );
     setShowplayer(true);
     setKing(assignedPlayers);
-    setPlayers([]);
   };
 
-  const renderAssignedPlayers = (assignedPlayers) => {
-    return assignedPlayers.map(({ player, king }, index) => (
-      <li key={index}>
-        {player.player} is in {king.name}'s house
-      </li>
-    ));
-  };
- 
   const renderKingsTable = (kings) => {
     return (
       <div className="flex-container">
@@ -81,8 +72,8 @@ function App() {
             <table className="content">
               <thead>
                 <tr>
-                  <th scope="col">NO.</th>
-                  <th scope="col">NAME</th>
+                  <th scope="col">ลำดับ</th>
+                  <th scope="col">รายชื่อ</th>
                 </tr>
               </thead>
               <tbody>
@@ -100,6 +91,12 @@ function App() {
         ))}
       </div>
     );
+  };
+
+  const handlereset = () => {
+    setPlayers([]);
+    alert(`ตอนนี้ได้ลบออกจากสถาบันหมดแล้ว`);
+    setShowplayer(false);
   };
 
   return (
@@ -161,16 +158,17 @@ function App() {
               <div className="background-image2"></div>
               <section class="wrapper">
                 <div class="top">4KINGS</div>
-                <div class="bottom" aria-hidden="true">
-                  4KINGS
-                </div>
+                <div class="bottom" aria-hidden="true">4KINGS</div>
               </section>
               {showplayer && renderKingsTable(Kings)}
               <button className="btn4 btn-back">
                 <span className="text-container">
-                  <span className="text" onClick={handleBackpage}>
-                    BACK
-                  </span>
+                  <span className="text" onClick={handleBackpage}>BACK</span>
+                </span>
+              </button>
+              <button className="btn4 btn-reset">
+                <span className="text-container">
+                  <span className="text" onClick={handlereset}>RESET</span>
                 </span>
               </button>
             </>
