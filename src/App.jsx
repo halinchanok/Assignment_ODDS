@@ -29,14 +29,18 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
+    
     const playerNamesInput = event.target.playerName.value;
     const playerNames = playerNamesInput
       .split(/[\s,]+/)
       .filter((name) => name.trim() !== "");
+    if (playerNames.length >= 1) {
+      setPlayers((prePlayers) => [...prePlayers, ...playerNames]);
+      event.target.playerName.value = "";
+    } else {
+      alert("กรุณาใส่ชื่อให้เรียบร้อย");
 
-    setPlayers((prevPlayers) => [...prevPlayers, ...playerNames]);
-    event.target.playerName.value = "";
+    }
   };
 
   function shuffleArray(array) {
@@ -53,14 +57,17 @@ function App() {
       player,
       king: shuffledKings[index % shuffledKings.length],
     }));
-
-    alert(
-      `Assigned players:\n\n${assignedPlayers
-        .map(({ player, king }) => `${player} is in ${king.name}'s house`)
-        .join("\n")}`
-    );
-    setShowplayer(true);
-    setKing(assignedPlayers);
+    if (players.length >= 1) {
+      alert(
+        `Assigned players:\n\n${assignedPlayers
+          .map(({ player, king }) => `${player} is in ${king.name}'s house`)
+          .join("\n")}`
+      );
+      setShowplayer(true);
+      setKing(assignedPlayers);
+    } else {
+      alert("กรุณากดเพิ่มชื่อก่อนอย่างน้อย 1 ชื่อ");
+    }
   };
 
   const renderKingsTable = (kings) => {
@@ -131,18 +138,14 @@ function App() {
                     name="playerName"
                     placeholder="Your name"
                   />
-                  <br />
+                  <br/>
                   <button className="btn2" type="submit" value="Add Player">
                     Add Name
                   </button>
-                  <button
-                    className="btn2"
-                    onClick={assignPlayers}
-                    disabled={players.length < 1}
-                  >
-                    Assign Name
-                  </button>
                 </form>
+                <button className="btn2" onClick={assignPlayers}>
+                    Assign Name
+                </button>
               </div>
               <button className="btn4 btn-home">
                 <span className="text-container">
@@ -158,17 +161,23 @@ function App() {
               <div className="background-image2"></div>
               <section class="wrapper">
                 <div class="top">4KINGS</div>
-                <div class="bottom" aria-hidden="true">4KINGS</div>
+                <div class="bottom" aria-hidden="true">
+                  4KINGS
+                </div>
               </section>
               {showplayer && renderKingsTable(Kings)}
               <button className="btn4 btn-back">
                 <span className="text-container">
-                  <span className="text" onClick={handleBackpage}>BACK</span>
+                  <span className="text" onClick={handleBackpage}>
+                    BACK
+                  </span>
                 </span>
               </button>
               <button className="btn4 btn-reset">
                 <span className="text-container">
-                  <span className="text" onClick={handlereset}>RESET</span>
+                  <span className="text" onClick={handlereset}>
+                    RESET
+                  </span>
                 </span>
               </button>
             </>
