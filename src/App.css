@@ -157,8 +157,6 @@ body {
 .wrapper {
   display: grid;
   place-content: center;
-  /* background-color: var(--background-color); */
-  /* min-height: 100vh; */
   font-family: "Oswald", sans-serif;
   font-size: clamp(1rem, 1rem + 6vw, 10rem);
   font-weight: 700;
