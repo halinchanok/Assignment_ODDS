@@ -18,13 +18,12 @@
 3. **Install Dependencies**:
    เปิด terminal แล้วสามารถ run ตามคำสั่งด้านล่างได้เลย
    ```
-   yarn install
+   npm install
    ```
    
 4. **Start the Development Server**:
    ```
-   yarn dev
-   yarn run dev
+   npm run dev
    ```
 5. Open your browser and navigate to (http://localhost:5173/) to view the app.
 
