@@ -5,6 +5,7 @@
 เพื่อรับสำเนาของโปรเจคและเริ่มต้นทำงานบนเครื่องทดสอบของคุณเพื่อการพัฒนาและทดสอบ ทำตามขั้นตอนดังต่อไปนี้:
 
 1. **Clone the Repository**: 
+   clone git ลงใน terminal หรือ command ภายในเครื่อง
    ```
    git clone https://github.com/Kwanpeemai/Assignment_ODDS.git
    ```
@@ -15,6 +16,7 @@
    ```
  
 3. **Install Dependencies**:
+   เปิด terminal แล้วสามารถ run ตามคำสั่งด้านล่างได้เลย
    ```
    yarn install
    ```
