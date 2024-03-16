@@ -144,7 +144,7 @@ function App() {
                   </button>
                 </form>
                 <button className="btn2" onClick={assignPlayers}>
-                    Assign Name
+                  Go to House!!!
                 </button>
               </div>
               <button className="btn4 btn-home">
