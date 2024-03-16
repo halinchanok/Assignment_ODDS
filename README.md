@@ -25,7 +25,7 @@
    ```
    npm run dev
    ```
-5. Open your browser and navigate to (http://localhost:5173/) to view the app.
+5. Open your browser and navigate to view the app.
 
 ## หมวกคัดสรรเข้าสถาบัน 4Kings ที่รันบน Vercel
 https://assignment-odds-qxzh9mi4f-peemais-projects.vercel.app
